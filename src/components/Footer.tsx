@@ -15,10 +15,10 @@ export const Footer = ({ locale, copy }: Props) => {
   return (
     <footer className="bg-slate-900 text-white py-20 border-t border-slate-800">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 border-b border-slate-800 pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-9 border-b border-slate-800 pb-16">
           {/* 1. Brand */}
           <div>
-            <div className="flex items-center mb-4 sm:mb-6 h-16">
+            <div className="flex items-end h-16 mt-[7px] mb-[19px]">
               <Link href={base} className="flex items-center gap-2 font-bold text-2xl group">
                 <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors shadow-lg flex-shrink-0">
                   <Landmark className="w-6 h-6 text-white" />
@@ -29,14 +29,14 @@ export const Footer = ({ locale, copy }: Props) => {
                 </span>
               </Link>
             </div>
-            <p className="text-slate-400 leading-relaxed">
+            <p className="text-slate-400 leading-relaxed pl-[5px]">
               {copy.footer.tagline}
             </p>
           </div>
 
           {/* 2. Event venue */}
           <div>
-            <div className="flex items-center mb-4 sm:mb-6 h-16">
+            <div className="flex items-end h-16 mb-6">
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">{copy.footer.venueTitle}</h4>
             </div>
             <div className="text-slate-400 space-y-4">
@@ -52,7 +52,7 @@ export const Footer = ({ locale, copy }: Props) => {
 
           {/* 3. Event date */}
           <div>
-            <div className="flex items-center mb-4 sm:mb-6 h-16">
+            <div className="flex items-end mb-4 sm:mb-6 h-16">
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">{copy.footer.dateTitle}</h4>
             </div>
             <div className="text-slate-400">
@@ -67,7 +67,7 @@ export const Footer = ({ locale, copy }: Props) => {
 
           {/* 4. Contact */}
           <div>
-            <div className="flex items-center mb-4 sm:mb-6 h-16">
+            <div className="flex items-end mb-4 sm:mb-6 h-16">
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">{copy.footer.contact}</h4>
             </div>
             <ul className="space-y-4 text-slate-400">
@@ -92,7 +92,7 @@ export const Footer = ({ locale, copy }: Props) => {
 
           {/* 5. Vulcan */}
           <div className="flex items-center sm:justify-center">
-            <div className="flex items-center sm:mb-6 min-h-16">
+            <div className="flex items-end sm:mb-6 min-h-16">
               <img
                 src="/Vulcan.png"
                 alt={copy.footer.organizerName}
