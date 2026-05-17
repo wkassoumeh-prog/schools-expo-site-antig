@@ -20,12 +20,12 @@ export const Footer = ({ locale, copy }: Props) => {
           <div>
             <div className="flex items-center mb-6 h-16">
               <Link href={base} className="flex items-center gap-2 font-bold text-2xl group">
-                <div className="p-2 bg-[#1f57ae] rounded-lg group-hover:bg-blue-700 transition-colors shadow-lg flex-shrink-0">
+                <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors shadow-lg flex-shrink-0">
                   <GraduationCap className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-xl font-bold transition-colors text-[#1f57ae] whitespace-nowrap">
+                <span className="text-xl font-bold transition-colors text-blue-600 whitespace-nowrap">
                   {copy.header.brand}{' '}
-                  <span className="text-[#c8764e]">{copy.header.brandHighlight}</span>
+                  <span className="text-amber-500">{copy.header.brandHighlight}</span>
                 </span>
               </Link>
             </div>

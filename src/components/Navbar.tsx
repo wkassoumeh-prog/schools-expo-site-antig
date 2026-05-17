@@ -73,9 +73,9 @@ export const Navbar = ({ locale, copy }: Props) => {
           <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors shadow-lg">
             <GraduationCap className="w-6 h-6 text-white" />
           </div>
-          <span className="text-xl font-bold transition-colors text-[#1f57ae] whitespace-nowrap">
+          <span className="text-xl font-bold transition-colors text-blue-600 whitespace-nowrap">
             {copy.header.brand}{' '}
-            <span className="text-[#c8764e]">{copy.header.brandHighlight}</span>
+            <span className="text-amber-500">{copy.header.brandHighlight}</span>
           </span>
         </Link>
 
