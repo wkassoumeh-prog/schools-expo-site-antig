@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  --primary: #2563EB;
+  --primary-dark: #1E40AF;
+  --accent: #F59E0B;
+  --border: #E5E7EB;
+  --muted: #6B7280;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-inter), var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: inherit;
+  overflow-x: hidden;
+}
+
+/* RTL: Arabic uses Cairo; LTR uses Inter (set via html class) */
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3 {
+  font-family: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* LTR-in-RTL: keep Latin/numbers/URLs left-to-right inside Arabic text */
+.ltr-in-rtl {
+  dir: ltr;
+  unicode-bidi: embed;
+}
+
+/* Scroll anchor offset for fixed navbar (~80px) */
+#why-expo,
+#exhibitors,
+#schools,
+#schedule,
+#faq,
+#register,
+#about {
+  scroll-margin-top: 5rem;
+}
+
+@layer utilities {
+  .text-muted-foreground {
+    color: var(--muted);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
