@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Menu, X } from 'lucide-react';
+import { Landmark, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -71,11 +71,11 @@ export const Navbar = ({ locale, copy }: Props) => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href={base} className="flex items-center gap-2 group">
           <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors shadow-lg">
-            <GraduationCap className="w-6 h-6 text-white" />
+            <Landmark className="w-6 h-6 text-white" />
           </div>
           <span className="text-xl font-bold transition-colors text-blue-600 whitespace-nowrap">
             {copy.header.brand}{' '}
-            <span className="text-amber-500">{copy.header.brandHighlight}</span>
+            <span className="text-white">{copy.header.brandHighlight}</span>
           </span>
         </Link>
 

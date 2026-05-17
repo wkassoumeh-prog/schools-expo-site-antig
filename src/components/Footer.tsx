@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { GraduationCap } from 'lucide-react';
+import { Landmark } from 'lucide-react';
 import { LtrText } from '@/components/LtrText';
 import type { Copy, Locale } from 'content/getCopy';
 type Props = {
@@ -18,14 +18,14 @@ export const Footer = ({ locale, copy }: Props) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 border-b border-slate-800 pb-16">
           {/* 1. Brand */}
           <div>
-            <div className="flex items-center mb-6 h-16">
+            <div className="flex items-center mb-4 sm:mb-6 h-16">
               <Link href={base} className="flex items-center gap-2 font-bold text-2xl group">
                 <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors shadow-lg flex-shrink-0">
-                  <GraduationCap className="w-6 h-6 text-white" />
+                  <Landmark className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xl font-bold transition-colors text-blue-600 whitespace-nowrap">
                   {copy.header.brand}{' '}
-                  <span className="text-amber-500">{copy.header.brandHighlight}</span>
+                  <span className="text-white">{copy.header.brandHighlight}</span>
                 </span>
               </Link>
             </div>
@@ -36,7 +36,7 @@ export const Footer = ({ locale, copy }: Props) => {
 
           {/* 2. Event venue */}
           <div>
-            <div className="flex items-center mb-4 sm:mb-6 h-auto">
+            <div className="flex items-center mb-4 sm:mb-6 h-16">
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">{copy.footer.venueTitle}</h4>
             </div>
             <div className="text-slate-400 space-y-4">
@@ -52,7 +52,7 @@ export const Footer = ({ locale, copy }: Props) => {
 
           {/* 3. Event date */}
           <div>
-            <div className="flex items-center mb-4 sm:mb-6 h-auto">
+            <div className="flex items-center mb-4 sm:mb-6 h-16">
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">{copy.footer.dateTitle}</h4>
             </div>
             <div className="text-slate-400">
@@ -67,7 +67,7 @@ export const Footer = ({ locale, copy }: Props) => {
 
           {/* 4. Contact */}
           <div>
-            <div className="flex items-center mb-4 sm:mb-6 h-auto">
+            <div className="flex items-center mb-4 sm:mb-6 h-16">
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">{copy.footer.contact}</h4>
             </div>
             <ul className="space-y-4 text-slate-400">
