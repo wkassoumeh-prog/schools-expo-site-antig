@@ -97,7 +97,7 @@ export const ImageBanner = ({ copy }: Props) => {
         >
           <NextImage
             src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070"
-            alt="EduGate Expo"
+            alt="EDUGATE EXPO"
             fill
             className="object-cover transition-transform duration-[2s] hover:scale-105"
           />

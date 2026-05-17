@@ -3,7 +3,7 @@ export const copyEn = {
   header: {
     brand: 'EDUGATE',
     brandHighlight: 'EXPO',
-    whyEduGate: 'Why EduGate',
+    whyEduGate: 'Why EDUGATE EXPO',
     exhibitors: 'Exhibitors',
     visitInfo: 'Visit Info',
     faq: 'FAQ',
@@ -11,7 +11,7 @@ export const copyEn = {
     registerNow: 'Register Now',
   },
   hero: {
-    badge: 'EduGate Expo 2026 • August 9–11',
+    badge: 'EDUGATE EXPO 2026 • August 9–11',
     openingDate: 'August 9–11',
     title: 'Your Future',
     titleHighlight: 'Starts Here',
@@ -52,7 +52,7 @@ export const copyEn = {
   },
   whyExpo: {
     title: 'Why',
-    titleHighlight: 'EduGate Expo?',
+    titleHighlight: 'EDUGATE EXPO?',
     subtitle: 'Connecting academic institutions with parents to evolve the educational process.',
     introduceParents: { title: 'Introduce parents', desc: 'To private schools and their diverse educational programs.' },
     assistFamilies: { title: 'Assist families', desc: 'In choosing the most suitable school for their children.' },
@@ -63,7 +63,7 @@ export const copyEn = {
   forExhibitors: {
     title: 'For',
     titleHighlight: 'Exhibitors',
-    subtitle: 'Why showcase at EduGate? Build direct trust with parents and highlight your excellence.',
+    subtitle: 'Why showcase at EDUGATE EXPO? Build direct trust with parents and highlight your excellence.',
     strengthenPresence: { title: 'Strengthen presence', desc: "Strengthen your school's presence in the educational market." },
     reachThousands: { title: 'Reach thousands', desc: 'Reach thousands of families actively looking to enroll.' },
     increaseEnrollment: { title: 'Increase enrollment', desc: 'Increase student enrollment numbers.' },
@@ -133,7 +133,7 @@ export const copyEn = {
   },
   schools: {
     title: 'Participating Institutions',
-    subtitle: 'Explore some of the leading schools and institutes joining EduGate Expo 2026.',
+    subtitle: 'Explore some of the leading schools and institutes joining EDUGATE EXPO 2026.',
     viewAll: 'View All Participating Schools',
     scholarships: 'Scholarships Available',
     details: 'Details',
@@ -172,7 +172,7 @@ export const copyEn = {
   faq: {
     title: 'Frequently Asked',
     titleHighlight: 'Questions',
-    subtitle: 'Everything you need to know about EduGate Expo 2026.',
+    subtitle: 'Everything you need to know about EDUGATE EXPO 2026.',
     q1: { q: 'Is the expo for students only?', a: 'The expo is open to students, parents, and anyone interested in education and professional development.' },
     q2: { q: 'Is there an entry fee?', a: 'Entry is free of charge.' },
     q3: {
@@ -210,7 +210,7 @@ export const copyEn = {
     },
     facebook: {
       title: 'Facebook',
-      text: 'EduGate Expo',
+      text: 'EDUGATE EXPO',
     },
     instagram: {
       title: 'Instagram',
@@ -240,7 +240,7 @@ export const copyEn = {
     },
   },
   footer: {
-    brand: 'EduGate Expo 2026',
+    brand: 'EDUGATE EXPO 2026',
     tagline: "Damascus's first comprehensive Schools and Institutes Exhibition. Your future starts here.",
     openingDates: 'August 9–11, 2026',
     quickLinks: 'Quick Links',

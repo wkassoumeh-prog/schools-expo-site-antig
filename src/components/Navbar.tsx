@@ -28,11 +28,15 @@ function scrollToSection(hash: string) {
 export const Navbar = ({ locale, copy }: Props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+      setIsScrolledPastHero(window.scrollY > window.innerHeight - 80);
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -63,8 +67,10 @@ export const Navbar = ({ locale, copy }: Props) => {
     <nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b',
-        isScrolled
-          ? 'bg-black/20 backdrop-blur-xl border-white/10 py-3 shadow-2xl'
+        isScrolledPastHero
+          ? 'bg-black/30 backdrop-blur-xl border-white/10 py-3 shadow-2xl'
+          : isScrolled
+          ? 'bg-black/20 backdrop-blur-xl border-white/10 py-3 shadow-xl'
           : 'bg-transparent border-transparent py-6'
       )}
     >
