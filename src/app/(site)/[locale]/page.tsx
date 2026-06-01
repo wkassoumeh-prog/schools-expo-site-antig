@@ -37,7 +37,7 @@ export default async function LocalePage({ params }: Props) {
       {sectionVisibility.testimonials && <Testimonials locale={validLocale} copy={copy} />}
       {sectionVisibility.faq && <FAQ locale={validLocale} copy={copy} />}
       {sectionVisibility.registrationCTA && <RegistrationCTA locale={validLocale} copy={copy} />}
-      <Contact locale={validLocale} copy={copy} />
+      <Contact copy={copy} />
       <Footer locale={validLocale} copy={copy} />
     </main>
   );

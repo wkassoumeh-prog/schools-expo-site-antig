@@ -201,7 +201,7 @@ export const copyEn = {
     description: 'We are here to answer your questions and provide all the information you need.',
     phone: {
       title: 'Phone',
-      number: '+963 992 874 838',
+      number: '+963 11 334 4805',
       copied: 'Copied!',
     },
     email: {
@@ -242,7 +242,11 @@ export const copyEn = {
   footer: {
     brand: 'EDUGATE EXPO 2026',
     tagline: "Damascus's first comprehensive Schools and Institutes Exhibition. Your future starts here.",
-    openingDates: 'August 9–11, 2026',
+    openingDates: {
+      days: 'August 9-10-11,',
+      month: '',
+      year: '2026',
+    },
     quickLinks: 'Quick Links',
     aboutExpo: 'About the Expo',
     forParents: 'For Parents',

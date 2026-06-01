@@ -69,7 +69,9 @@ export const Features = ({ copy }: Props) => {
               {copy.forExhibitors.title}{' '}
               <span className="text-blue-600">{copy.forExhibitors.titleHighlight}</span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">{copy.forExhibitors.subtitle}</p>
+            <p className="text-gray-600 max-w-2xl mx-auto" style={{ whiteSpace: 'pre-line' }}>
+              {copy.forExhibitors.subtitle}
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {exhibitorBenefits.map((f, i) => (

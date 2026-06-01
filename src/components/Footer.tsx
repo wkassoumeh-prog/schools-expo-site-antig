@@ -60,7 +60,21 @@ export const Footer = ({ locale, copy }: Props) => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
                 </svg>
-                <p><LtrText value={copy.footer.openingDates} /></p>
+                <p>
+                  <LtrText value={copy.footer.openingDates.days} />
+                  {copy.footer.openingDates.month ? (
+                    <>
+                      {' '}
+                      {copy.footer.openingDates.month}
+                    </>
+                  ) : null}
+                  {copy.footer.openingDates.year ? (
+                    <>
+                      {' '}
+                      <LtrText value={copy.footer.openingDates.year} />
+                    </>
+                  ) : null}
+                </p>
               </div>
             </div>
           </div>
