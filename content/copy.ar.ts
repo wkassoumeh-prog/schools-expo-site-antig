@@ -281,7 +281,7 @@ export const copyAr = {
       month: 'آب',
       year: '2026',
     },
-    eventTime: '4:00 مساءً – 10:00 مساءً',
+    eventTime: 'من 4:00 مساءً حتى 10:00 مساءً',
     quickLinks: 'روابط سريعة',
     aboutExpo: 'عن المعرض',
     forParents: 'للأهالي',

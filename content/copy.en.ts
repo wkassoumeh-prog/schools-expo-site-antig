@@ -247,7 +247,7 @@ export const copyEn = {
       month: '',
       year: '2026',
     },
-    eventTime: '4:00 PM – 10:00 PM',
+    eventTime: '4:00 PM to 10:00 PM',
     quickLinks: 'Quick Links',
     aboutExpo: 'About the Expo',
     forParents: 'For Parents',
