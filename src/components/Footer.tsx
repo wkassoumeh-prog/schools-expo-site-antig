@@ -55,7 +55,7 @@ export const Footer = ({ locale, copy }: Props) => {
             <div className="flex items-end mb-4 sm:mb-6 h-16">
               <h4 className="text-lg font-bold text-white uppercase tracking-wider">{copy.footer.dateTitle}</h4>
             </div>
-            <div className="text-slate-400">
+            <div className="text-slate-400 space-y-3">
               <div className="flex items-center gap-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
@@ -74,6 +74,14 @@ export const Footer = ({ locale, copy }: Props) => {
                       <LtrText value={copy.footer.openingDates.year} />
                     </>
                   ) : null}
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p>
+                  <LtrText value={copy.footer.eventTime} />
                 </p>
               </div>
             </div>
@@ -108,7 +116,7 @@ export const Footer = ({ locale, copy }: Props) => {
           <div className="flex items-center sm:justify-center">
             <div className="flex items-end sm:mb-6 min-h-16">
               <img
-                src="/Vulcan.png"
+                src="/vulcan_logo_white_transparent.svg"
                 alt={copy.footer.organizerName}
                 className="h-[8.1rem] sm:h-[9.45rem] w-auto max-w-full object-contain object-start opacity-90"
               />
