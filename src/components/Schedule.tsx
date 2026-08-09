@@ -51,13 +51,13 @@ export const Schedule = ({ locale, copy }: Props) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="relative pl-8 md:pl-0"
+              className="relative pl-8 rtl:pl-0 rtl:pr-8 md:pl-0 md:rtl:pr-0"
             >
               <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-blue-100 -translate-x-1/2">
                 <div className="absolute top-8 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-blue-600 shadow-md transform scale-100" />
               </div>
-              <div className="md:hidden absolute left-0 top-0 bottom-0 w-px bg-blue-100">
-                <div className="absolute top-8 left-0 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-blue-600 shadow-md" />
+              <div className="md:hidden absolute left-0 rtl:left-auto rtl:right-0 top-0 bottom-0 w-px bg-blue-100">
+                <div className="absolute top-8 left-0 rtl:left-auto rtl:right-0 -translate-x-1/2 rtl:translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-blue-600 shadow-md" />
               </div>
 
               <div
