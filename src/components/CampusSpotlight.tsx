@@ -25,7 +25,7 @@ export const CampusSpotlight = ({ locale, copy }: Props) => {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl z-10">
+            <div className="relative h-[320px] sm:h-[450px] md:h-[600px] rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-2xl z-10">
               <Image
                 src="/images/campusspotlight-1.jpg"
                 alt="Campus spotlight"

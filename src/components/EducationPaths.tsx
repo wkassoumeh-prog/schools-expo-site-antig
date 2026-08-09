@@ -86,14 +86,14 @@ export const EducationPaths = ({ locale, copy }: Props) => {
 
 export const ImageBanner = ({ copy }: Props) => {
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-12 sm:py-20 md:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.1)]"
+          className="relative min-h-[460px] sm:min-h-[500px] md:h-[600px] rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.1)] flex items-end"
         >
           <NextImage
             src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070"
@@ -101,19 +101,19 @@ export const ImageBanner = ({ copy }: Props) => {
             fill
             className="object-cover transition-transform duration-[2s] hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent" />
-          <div className="absolute bottom-16 left-16 right-16">
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent" />
+          <div className="relative z-10 w-full p-4 sm:p-8 md:p-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="bg-white/10 backdrop-blur-xl border border-white/20 p-12 rounded-[2rem] max-w-3xl"
+              className="bg-black/40 md:bg-white/10 backdrop-blur-xl border border-white/20 p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-[2rem] max-w-3xl"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-6 leading-tight">
                 {copy.aboutExpo.title}
               </h2>
-              <p className="text-xl text-gray-200 leading-relaxed">
+              <p className="text-sm sm:text-lg md:text-xl text-gray-100 sm:text-gray-200 leading-relaxed">
                 {copy.aboutExpo.description}
               </p>
             </motion.div>
