@@ -27,7 +27,7 @@ export const CampusSpotlight = ({ locale, copy }: Props) => {
           >
             <div className="relative h-[320px] sm:h-[450px] md:h-[600px] rounded-2xl sm:rounded-[3rem] overflow-hidden shadow-2xl z-10">
               <Image
-                src="/images/campusspotlight-1.jpg"
+                src={copy.media.campus1}
                 alt="Campus spotlight"
                 fill
                 className="object-cover"
@@ -41,7 +41,7 @@ export const CampusSpotlight = ({ locale, copy }: Props) => {
               className="absolute -bottom-12 -right-12 h-64 w-64 rounded-3xl overflow-hidden border-8 border-white shadow-2xl z-20 hidden md:block rtl:right-auto rtl:left-[-3rem]"
             >
               <Image
-                src="/images/campusspotlight-2.jpg"
+                src={copy.media.campus2}
                 alt="Collaboration"
                 fill
                 className="object-cover"

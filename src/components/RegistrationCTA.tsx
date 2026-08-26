@@ -2,16 +2,18 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { Copy, Locale } from 'content/getCopy';
+import Link from 'next/link';
+import { REGISTER_URL, type City, type Copy, type Locale } from 'content/getCopy';
 
 type Props = {
   locale: Locale;
+  city: City;
   copy: Copy;
 };
 
 const EXHIBITOR_TIERS = ['goldenExhibitor', 'silverExhibitor', 'standard'] as const;
 
-export const RegistrationCTA = ({ copy }: Props) => {
+export const RegistrationCTA = ({ locale, city, copy }: Props) => {
   const [showOptions, setShowOptions] = useState(false);
 
   return (
@@ -55,32 +57,48 @@ export const RegistrationCTA = ({ copy }: Props) => {
               transition={{ delay: 0.4 }}
               className="flex flex-col items-center gap-4"
             >
-              <button
-                onClick={() => setShowOptions((v) => !v)}
-                className="px-10 py-4 bg-white text-blue-600 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                {copy.registration.registerExhibitor}
-              </button>
-              <AnimatePresence>
-                {showOptions && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex flex-col gap-3 w-full max-w-sm overflow-hidden"
+              {copy.registration.visitorPrimary ? (
+                <Link
+                  href={REGISTER_URL}
+                  className="px-10 py-4 bg-white text-blue-600 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  {copy.registration.registerVisitor}
+                </Link>
+              ) : null}
+              {copy.registration.showExhibitorTiers ? (
+                <>
+                  <button
+                    onClick={() => setShowOptions((v) => !v)}
+                    className={
+                      copy.registration.visitorPrimary
+                        ? 'px-10 py-4 bg-white/10 border border-white/30 text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-all'
+                        : 'px-10 py-4 bg-white text-blue-600 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1'
+                    }
                   >
-                    {EXHIBITOR_TIERS.map((key) => (
-                      <button
-                        key={key}
-                        className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/30 rounded-xl font-medium text-white text-start transition-colors"
+                    {copy.registration.registerExhibitor}
+                  </button>
+                  <AnimatePresence>
+                    {showOptions && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="flex flex-col gap-3 w-full max-w-sm overflow-hidden"
                       >
-                        {copy.registration[key]}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                        {EXHIBITOR_TIERS.map((key) => (
+                          <button
+                            key={key}
+                            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/30 rounded-xl font-medium text-white text-start transition-colors"
+                          >
+                            {copy.registration[key]}
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </>
+              ) : null}
             </motion.div>
           </div>
         </motion.div>

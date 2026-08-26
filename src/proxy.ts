@@ -1,19 +1,35 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { CITIES, DEFAULT_CITY, DEFAULT_LOCALE, LOCALES, type City, type Locale } from 'content/getCopy';
 
-const LOCALES = ['en', 'ar'] as const;
+function isLocale(value: string | undefined): value is Locale {
+  return LOCALES.includes(value as Locale);
+}
 
-/** Redirect / to /en, set x-locale header for locale-aware layouts, exclude api/admin */
+function isCity(value: string | undefined): value is City {
+  return CITIES.includes(value as City);
+}
+
+/** Redirect / to /ar/aleppo, /en and /ar to /{locale}/aleppo, set x-locale header */
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
-  if (pathname === '/') {
-    return NextResponse.redirect(new URL('/en', request.url));
-  }
-
   const segments = pathname.split('/').filter(Boolean);
   const maybeLocale = segments[0];
-  const locale = LOCALES.includes(maybeLocale as (typeof LOCALES)[number]) ? maybeLocale : 'en';
+  const maybeCity = segments[1];
+
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}/${DEFAULT_CITY}`, request.url));
+  }
+
+  if (isLocale(maybeLocale) && segments.length === 1) {
+    return NextResponse.redirect(new URL(`/${maybeLocale}/${DEFAULT_CITY}`, request.url));
+  }
+
+  if (isLocale(maybeLocale) && maybeCity && !isCity(maybeCity)) {
+    return NextResponse.redirect(new URL(`/${maybeLocale}/${DEFAULT_CITY}`, request.url));
+  }
+
+  const locale: Locale = isLocale(maybeLocale) ? maybeLocale : DEFAULT_LOCALE;
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('x-next-locale', locale);

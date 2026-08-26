@@ -10,11 +10,9 @@ type Props = {
   copy: Copy;
 };
 
-const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5'] as const;
-
-export const FAQ = ({ locale, copy }: Props) => {
+export const FAQ = ({ copy }: Props) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const faqs = FAQ_KEYS.map((key) => copy.faq[key]);
+  const faqs = copy.faq.items;
 
   return (
     <section id="faq" className="py-24 bg-gray-50">

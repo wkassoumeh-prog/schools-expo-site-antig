@@ -8,7 +8,8 @@ export function DocumentDirSync() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const locale = pathname?.startsWith('/ar') ? 'ar' : 'en';
+    const first = pathname?.split('/').filter(Boolean)[0];
+    const locale = first === 'en' ? 'en' : 'ar';
     const isRtl = locale === 'ar';
     const html = document.documentElement;
 

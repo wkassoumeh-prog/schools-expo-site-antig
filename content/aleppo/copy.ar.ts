@@ -1,5 +1,11 @@
-/** Arabic copy – نفس البنية */
-export const copyAr = {
+import type { Copy } from '../getCopy';
+
+/** Arabic copy – Aleppo event (from sister landing page, matching existing site Arabic) */
+export const copyAleppoAr: Copy = {
+  cityToggle: {
+    damascus: 'دمشق',
+    aleppo: 'حلب',
+  },
   header: {
     brand: 'EDUGATE',
     brandHighlight: 'EXPO',
@@ -11,24 +17,23 @@ export const copyAr = {
     registerNow: 'سجّل الآن',
   },
   hero: {
-    badge: 'إديوغيت إكسبو 2026 • 9-10-11 آب',
-    openingDate: '9–11 آب',
+    badge: 'إديوغيت إكسبو 2026 • 28-29-30 آب',
+    openingDate: '28–30 آب',
     title: 'قرارك اليوم',
     titleHighlight: 'يصنع مستقبل أبنائك',
-    subtitle:
-      'الخيارات التعليمية تحت سقف واحد. المعرض الأول الشامل للمدارس والمعاهد في دمشق.',
+    subtitle: 'الخيارات التعليمية تحت سقف واحد. المعرض الأول الشامل للمدارس والمعاهد في حلب.',
     visitExpo: 'زيارة المعرض',
     exhibitorReg: 'تسجيل العارضين',
     openingDay: 'أيام المعرض',
     exhibitors: 'المؤسسات المشاركة',
-    exhibitorsCount: '50+',
+    exhibitorsCount: '35',
     freeEntry: 'مجاني',
     entryFee: 'رسوم الدخول',
   },
   aboutExpo: {
     title: 'عن المعرض',
     description:
-      'انطلاقاً من أهمية تطوير العملية التعليمية وتعزيز التواصل بين المؤسسات التعليمية وأولياء الأمور ينطلق للمرة الأولى في دمشق المعرض الأول للمدارس والمعاهد كمنصة شاملة تجمع أبرز المدارس الخاصة، معاهد تعليم اللغات، المعاهد التعليمية والترفيهية، المدارس الافتراضية، المنصات التعليمية، مراكز تدريب الأطفال من ذوي الاحتياجات الخاصة، شركات البرمجيات التعليمية، دور النشر، وشركات القرطاسية في مكان واحد. يقدم المعرض تجربة تفاعلية متكاملة للأهالي والطلاب لاستكشاف جميع الخيارات التعليمية والترفيهية والتقنية، ومقارنة البرامج والخدمات بشكل مباشر قبل اتخاذ القرار الأمثل لمستقبل الأبناء.',
+      'الملتقى التعليمي الأول في حلب. المنصة الأوسع التي تجمع المدارس، المعاهد والخيارات التعليمية تحت سقف واحد. ثلاثة أيام معرض، 35 جهة مشاركة، ست ساعات يومياً، وستة قطاعات تعليمية.',
   },
   whyParents: {
     label: 'لماذا يزور الأهالي المعرض؟',
@@ -113,43 +118,22 @@ export const copyAr = {
   duringVisit: {
     title: 'خلال زيارتك',
     titleHighlight: 'للمعرض',
-    subtitle: 'ساعات الزيارة من 4:00 مساءً حتى 10:00 مساءً. تتوفر باصات نقل مجانية أمام سانا وفي ساحة باب توما من الساعة 4:00 مساءً حتى 9:00 مساءً.',
-    discoverSchools: {
-      time: '04:00 م',
-      title: 'التعرف على المدارس الخاصة',
-      location: 'القاعة الرئيسية',
-      desc: 'التعرف على أبرز المدارس الخاصة وبرامجها ومقارنة المناهج.',
-    },
-    comparePrograms: {
-      time: '05:15 م',
-      title: 'مقارنة البرامج',
-      location: 'مركز المعلومات',
-      desc: 'مقارنة المناهج والرسوم الدراسية وأنظمة الدفع.',
-    },
-    meetAdmins: {
-      time: '06:30 م',
-      title: 'لقاء الإدارات',
-      location: 'غرف اللقاء',
-      desc: 'لقاء مباشر مع إدارات المدارس والمعلمين.',
-    },
-    consultations: {
-      time: '07:45 م',
-      title: 'استشارات تعليمية',
-      location: 'جناح الاستشارات',
-      desc: 'الحصول على استشارات تعليمية متخصصة لأبناءك.',
-    },
-    discounts: {
-      time: '09:00 م',
-      title: 'خصومات حصرية',
-      location: 'مكتب التسجيل',
-      desc: 'الاستفادة من عروض وخصومات تسجيل حصرية.',
-    },
-    doorsClose: {
-      time: '10:00 م',
-      title: 'إغلاق الأبواب',
-      location: 'جميع الأجنحة',
-      desc: 'ساعات الزيارة من 4:00 مساءً حتى 10:00 مساءً.',
-    },
+    subtitle:
+      'ساعات الزيارة من 5:00 مساءً حتى 11:00 مساءً. الموقع: سوق الإنتاج الزراعي والصناعي، حلب. الدخول مجاني للزوار مع التسجيل المسبق.',
+    activities: [
+      {
+        time: '05:00 م',
+        title: 'افتتاح الأبواب',
+        location: 'سوق الإنتاج، حلب',
+        desc: 'المعرض مفتوح يومياً من 5:00 مساءً حتى 11:00 مساءً. لاقِ 35 جهة تعليمية تحت سقف واحد.',
+      },
+      {
+        time: '11:00 م',
+        title: 'إغلاق الأبواب',
+        location: 'جميع الأجنحة',
+        desc: 'ساعات الزيارة من 5:00 مساءً حتى 11:00 مساءً. الدخول مجاني مع التسجيل المسبق.',
+      },
+    ],
   },
   campusSpotlight: {
     badge: 'التميز التعليمي',
@@ -163,14 +147,117 @@ export const copyAr = {
     virtualSchools: { title: 'المدارس الافتراضية', desc: 'مستقبل التعلم الأكاديمي المرن.' },
   },
   schools: {
+    layout: 'logos',
     title: 'المؤسسات المشاركة',
-    subtitle: 'اكتشف أبرز المدارس والمعاهد المشاركة في إديوغيت إكسبو 2026.',
+    subtitle: 'مدارس ورياض أطفال ومعاهد ومنصات تعليمية تلتقي كلها في حلب على مدى ثلاثة أيام.',
     viewAll: 'عرض جميع المدارس',
     scholarships: 'منح متاحة',
     details: 'التفاصيل',
-    school1: { name: 'دمشق الدولية', location: 'المزة، دمشق', type: 'دولي' },
-    school2: { name: 'مدرسة الأمل الخاصة', location: 'المالكي، دمشق', type: 'وطني' },
-    school3: { name: 'الأكاديمية الحديثة السورية', location: 'كفرسوسة، دمشق', type: 'وطني ولغات' },
+    items: [
+      { name: 'EduXpert', logo: '/aleppo/logos/eduxpert.png' },
+      { name: 'سحابة تمكين التعليم ETC', logo: '/aleppo/logos/etc-cloud.png' },
+      { name: 'INNOTYX', logo: '/aleppo/logos/innotyx.png' },
+      { name: 'Maker Academy', logo: '/aleppo/logos/maker-academy.png' },
+      { name: 'Genius Kids', logo: '/aleppo/logos/genius-kids.png' },
+      { name: 'إدارة التعليم التأسيسي الشرعي', logo: '/aleppo/logos/tasisi-education.png' },
+      { name: 'الدليل التعليمي دار الرواد', logo: '/aleppo/logos/dar-alruwad.png' },
+      { name: 'المدرسة الدولية', logo: '/aleppo/logos/international-school.png' },
+    ],
+  },
+  venue: {
+    label: 'موقع المعرض',
+    title: 'سوق الإنتاج — حلب',
+    mapEmbedUrl:
+      'https://maps.google.com/maps?q=36.2096217,37.1375853&hl=ar&z=16&output=embed',
+    mapTitle: 'موقع إديوغيت إكسبو في سوق الإنتاج، حلب',
+    rows: [
+      {
+        icon: 'address',
+        label: 'العنوان',
+        value: 'سوق الإنتاج الزراعي والصناعي، حلب، سوريا',
+      },
+      {
+        icon: 'dates',
+        label: 'التواريخ',
+        value: '28 – 29 – 30 آب 2026',
+      },
+      {
+        icon: 'hours',
+        label: 'أوقات الزيارة',
+        value: 'يومياً من 5:00 مساءً حتى 11:00 مساءً',
+      },
+      {
+        icon: 'entry',
+        label: 'الدخول',
+        value: 'مجاني للزوار مع التسجيل المسبق',
+      },
+    ],
+  },
+  sponsors: {
+    label: 'الرعاة والشركاء الإعلاميون',
+    title: 'رعاة المعرض',
+    subtitle: 'نفخر بشراكة مؤسسات تؤمن بأن التعليم هو الطريق الأقصر نحو مستقبل أفضل.',
+    groups: [
+      {
+        label: 'الرعاة الرسميون',
+        items: [
+          { name: 'محافظة حلب', role: 'راعٍ رسمي', logo: '/aleppo/logos/aleppo-governorate.png' },
+          { name: 'مديرية التربية والتعليم في حلب', role: 'راعٍ رسمي', logo: '/aleppo/logos/aleppo-education-directorate.png' },
+          { name: 'مديرية إعلام حلب', role: 'راعٍ رسمي', logo: '/aleppo/logos/aleppo-media-directorate.png' },
+          { name: 'قناة حلب اليوم', role: 'شريك إعلامي', logo: '/aleppo/logos/halab-alyoum-tv.png' },
+        ],
+      },
+      {
+        label: 'الرعاة الذهبيون',
+        items: [
+          { name: 'المدرسة الوطنية', role: 'راعٍ ذهبي', logo: '/aleppo/logos/al-wataniya-school.png' },
+          { name: 'مدرسة الإبداع الخاصة', role: 'راعٍ ذهبي', logo: '/aleppo/logos/al-ibdaa-school.png' },
+          { name: 'منصة تنوين', role: 'راعٍ ذهبي', logo: '/aleppo/logos/tanween-platform.png' },
+        ],
+      },
+      {
+        label: 'راعي الألبسة',
+        items: [{ name: 'Oulabi Mir', role: 'راعي الألبسة', logo: '/aleppo/logos/oulabi-mir.png' }],
+      },
+      {
+        label: 'رعاة الضيافة',
+        items: [
+          { name: 'City Café', role: 'راعي ضيافة', logo: '/aleppo/logos/city-cafe.png' },
+          { name: 'بن الحموي', role: 'راعي ضيافة', logo: '/aleppo/logos/hamwi-coffee.png' },
+        ],
+      },
+    ],
+  },
+  sectors: {
+    label: 'العارضون',
+    title: 'العارضون في إديوغيت إكسبو',
+    subtitle: 'ستة قطاعات تغطي رحلة التعلّم كاملة.',
+    items: [
+      {
+        title: 'المدارس الدولية',
+        desc: 'مدارس دولية تعرض مناهجها وأنظمتها وبرامجها ومزاياها التنافسية.',
+      },
+      {
+        title: 'المدارس الافتراضية',
+        desc: 'مدارس أونلاين ودولية توفّر شهادات معتمدة ومرونة كاملة بالدراسة.',
+      },
+      {
+        title: 'المنصات التعليمية',
+        desc: 'منصات تعليمية تقدّم دروساً ومسارات ومحتوى تفاعلياً لكل المراحل.',
+      },
+      {
+        title: 'التطبيقات التعليمية',
+        desc: 'تطبيقات ذكية للطالب وأولياء الأمور والمدرسة، ترافق المذاكرة والمتابعة والاختبارات.',
+      },
+      {
+        title: 'الشركات',
+        desc: 'شركات تقنية وتجهيزات ومستلزمات وحلول تخدم القطاع التعليمي.',
+      },
+      {
+        title: 'المعاهد ومراكز التدريب',
+        desc: 'معاهد ومراكز لغات وتدريب مهني وشهادات دولية معتمدة.',
+      },
+    ],
   },
   gallery: {
     title: 'لحظات',
@@ -195,7 +282,7 @@ export const copyAr = {
     },
     t3: {
       quote:
-        'أخيراً، حدث يجمع كل الخيارات التعليمية تحت سقف واحد في دمشق. زيارة لا بد منها لكل عائلة.',
+        'أخيراً، حدث يجمع كل الخيارات التعليمية تحت سقف واحد في حلب. زيارة لا بد منها لكل عائلة.',
       author: 'لينا قباني',
       role: 'ولي أمر',
     },
@@ -204,30 +291,34 @@ export const copyAr = {
     title: 'الأسئلة',
     titleHighlight: 'الشائعة',
     subtitle: 'كل ما تحتاج معرفته عن إديوغيت إكسبو 2026.',
-    q1: {
-      q: 'هل المعرض مخصص للطلاب فقط؟',
-      a: 'المعرض مفتوح للطلاب وأولياء الأمور وأي شخص مهتم بالتعليم والتطوير.',
-    },
-    q2: { q: 'هل توجد رسوم على الدخول؟', a: 'الدخول مجاني.' },
-    q3: {
-      q: 'هل يمكن للطلاب التسجيل أثناء المعرض؟',
-      a: 'نعم، سيكون التواصل المباشر والتسجيل متاحاً مع العديد من المؤسسات المشاركة.',
-    },
-    q4: { q: 'متى ساعات الزيارة؟', a: 'ساعات الزيارة من 4:00 مساءً حتى 10:00 مساءً.' },
-    q5: {
-      q: 'هل يوجد مواصلات إلى مدينة المعارض؟',
-      a: 'نعم، تتوفر باصات نقل مجانية أمام سانا وفي ساحة باب توما من الساعة 4:00 مساءً حتى 9:00 مساءً.',
-    },
+    items: [
+      {
+        q: 'هل المعرض مخصص للطلاب فقط؟',
+        a: 'المعرض مفتوح للطلاب وأولياء الأمور وأي شخص مهتم بالتعليم والتطوير.',
+      },
+      { q: 'هل توجد رسوم على الدخول؟', a: 'الدخول مجاني مع التسجيل المسبق.' },
+      {
+        q: 'هل يمكن للطلاب التسجيل أثناء المعرض؟',
+        a: 'نعم، سيكون التواصل المباشر والتسجيل متاحاً مع العديد من المؤسسات المشاركة.',
+      },
+      { q: 'متى ساعات الزيارة؟', a: 'ساعات الزيارة من 5:00 مساءً حتى 11:00 مساءً.' },
+      {
+        q: 'أين يقام المعرض؟',
+        a: 'سوق الإنتاج الزراعي والصناعي، حلب، سوريا.',
+      },
+    ],
   },
   registration: {
-    title: 'تسجيل العارضين',
-    subtitle:
-      'عزز حضور مدرستك بوصولك إلى آلاف العائلات.',
+    title: 'سجّل الآن',
+    subtitle: 'سجّل زيارتك مجاناً واحصل على بطاقة دخولك، ولاقِ 35 جهة تعليمية في مكان واحد خلال ثلاثة أيام.',
+    registerVisitor: 'سجّل الآن',
     registerExhibitor: 'تسجيل كعارض',
     goldenExhibitor: 'عارض ذهبي',
     silverExhibitor: 'عارض فضّي',
     standard: 'عارض عادي',
     sponsorsPartners: 'الرعاة والشركاء الإعلاميون',
+    showExhibitorTiers: true,
+    visitorPrimary: true,
   },
   contact: {
     badge: 'تواصل معنا',
@@ -269,19 +360,19 @@ export const copyAr = {
       subjectPlaceholder: 'موضوع الرسالة',
       message: 'الرسالة',
       messagePlaceholder: 'كيف يمكننا مساعدتك؟',
-      sending: 'جاري الإرسال...',
+      sending: 'جاري الإرسال',
       submit: 'إرسال الرسالة',
     },
   },
   footer: {
     brand: 'إديوغيت إكسبو 2026',
-    tagline: 'المعرض الأول الشامل للمدارس والمعاهد في دمشق. مستقبلك يبدأ هنا.',
+    tagline: 'المعرض الأول الشامل للمدارس والمعاهد في حلب. مستقبلك يبدأ هنا.',
     openingDates: {
-      days: '9-10-11',
+      days: '28-29-30',
       month: 'آب',
       year: '2026',
     },
-    eventTime: 'من 4:00 مساءً حتى 10:00 مساءً',
+    eventTime: 'من 5:00 مساءً حتى 11:00 مساءً',
     quickLinks: 'روابط سريعة',
     aboutExpo: 'عن المعرض',
     forParents: 'للأهالي',
@@ -291,7 +382,7 @@ export const copyAr = {
     dateTitle: 'تاريخ المعرض',
     contact: 'تواصل معنا',
     phone: '+963 992 874 838',
-    address: 'دمشق، سوريا',
+    address: 'سوق الإنتاج الزراعي والصناعي، حلب، سوريا',
     email: 'info@edugate-expo.com',
     organizer: 'تنظيم',
     organizerName: 'فولكان',
@@ -299,4 +390,18 @@ export const copyAr = {
     facebook: 'فيسبوك',
     instagram: 'إنستغرام',
   },
-} as const;
+  media: {
+    heroImage: '/aleppo/photos/hero-poster.jpg',
+    heroVideo: '/aleppo/videos/hero-hd.mp4',
+    heroPoster: '/aleppo/photos/hero-poster.jpg',
+    aboutBanner: '/aleppo/photos/about-visual.jpg',
+    campus1: '/aleppo/photos/cta-visual.jpg',
+    campus2: '/aleppo/photos/og-cover.jpg',
+    whyParents: [
+      '/aleppo/photos/about-visual.jpg',
+      '/aleppo/photos/cta-visual.jpg',
+      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070',
+      '/aleppo/photos/hero-poster.jpg',
+    ],
+  },
+};

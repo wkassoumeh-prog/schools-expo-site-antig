@@ -26,7 +26,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const headersList = await headers();
-  const locale = (headersList.get('x-next-locale') || 'en') as 'en' | 'ar';
+  const locale = (headersList.get('x-next-locale') || 'ar') as 'en' | 'ar';
   const isRtl = locale === 'ar';
   const lang = locale === 'ar' ? 'ar' : 'en';
 

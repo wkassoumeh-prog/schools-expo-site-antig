@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Landmark, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import type { Copy, Locale } from 'content/getCopy';
+import { cityPath, REGISTER_URL, type City, type Copy, type Locale } from 'content/getCopy';
 
 type Props = {
   locale: Locale;
+  city: City;
   copy: Copy;
 };
 
@@ -25,7 +27,7 @@ function scrollToSection(hash: string) {
   }
 }
 
-export const Navbar = ({ locale, copy }: Props) => {
+export const Navbar = ({ locale, city, copy }: Props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
@@ -47,11 +49,11 @@ export const Navbar = ({ locale, copy }: Props) => {
     }
   }, [pathname]);
 
-  const base = `/${locale}`;
+  const base = cityPath(locale, city);
   const otherLocale: Locale = locale === 'en' ? 'ar' : 'en';
   const handleLocaleSwitch = () => {
     const hash = window.location.hash;
-    router.push(`/${otherLocale}${hash}`);
+    router.push(`${cityPath(otherLocale, city)}${hash}`);
     setIsMobileMenuOpen(false);
   };
 
@@ -74,19 +76,20 @@ export const Navbar = ({ locale, copy }: Props) => {
           : 'bg-transparent border-transparent py-6'
       )}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href={base} className="flex items-center gap-2 group">
-          <div className="p-2 bg-blue-600 rounded-lg group-hover:bg-blue-700 transition-colors shadow-lg">
-            <Landmark className="w-6 h-6 text-white" />
-          </div>
-          <span className="text-xl font-bold transition-colors text-blue-600 whitespace-nowrap">
-            {copy.header.brand}{' '}
-            <span className="text-white">{copy.header.brandHighlight}</span>
-          </span>
+      <div className="container mx-auto px-6 flex items-center justify-between gap-4">
+        <Link href={base} className="flex items-center shrink-0 group">
+          <Image
+            src="/aleppo/logos/edugate-wordmark-duo.svg"
+            alt={`${copy.header.brand} ${copy.header.brandHighlight}`}
+            width={202}
+            height={40}
+            className="h-8 sm:h-10 w-auto max-w-[202px] transition-opacity group-hover:opacity-90"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-8">
           <Link href={`${base}#why-expo`} className="text-sm font-bold transition-colors text-white hover:text-blue-300" onClick={(e) => handleSectionClick(e, '#why-expo')}>
             {copy.header.whyEduGate}
           </Link>
@@ -110,21 +113,22 @@ export const Navbar = ({ locale, copy }: Props) => {
             {locale === 'en' ? 'العربية' : 'English'}
           </button>
           <Link
-            href={`${base}#register`}
-            className="px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/40"
-            onClick={(e) => handleSectionClick(e, '#register')}
+            href={REGISTER_URL}
+            className="px-6 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/40 whitespace-nowrap shrink-0"
           >
             {copy.header.registerNow}
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden p-2 transition-colors text-white"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
+        {/* Mobile / tablet toggle */}
+        <div className="flex lg:hidden items-center gap-3">
+          <button
+            className="p-2 transition-colors text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -132,7 +136,7 @@ export const Navbar = ({ locale, copy }: Props) => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 p-6 flex flex-col gap-4 shadow-xl"
+          className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 p-6 flex flex-col gap-4 shadow-xl"
         >
           <Link href={`${base}#why-expo`} className="text-gray-900 font-semibold" onClick={(e) => handleSectionClick(e, '#why-expo')}>
             {copy.header.whyEduGate}
@@ -152,14 +156,14 @@ export const Navbar = ({ locale, copy }: Props) => {
           <button
             type="button"
             onClick={handleLocaleSwitch}
-            className="text-left text-gray-900 font-semibold w-full"
+            className="text-start text-gray-900 font-semibold w-full"
           >
             {locale === 'en' ? 'العربية' : 'English'}
           </button>
           <Link
-            href={`${base}#register`}
+            href={REGISTER_URL}
             className="w-full py-3 bg-blue-600 text-white text-center rounded-lg font-bold"
-            onClick={(e) => handleSectionClick(e, '#register')}
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             {copy.header.registerNow}
           </Link>

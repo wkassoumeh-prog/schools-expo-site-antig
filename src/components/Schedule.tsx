@@ -10,17 +10,8 @@ type Props = {
   copy: Copy;
 };
 
-const ACTIVITY_KEYS = [
-  'discoverSchools',
-  'comparePrograms',
-  'meetAdmins',
-  'consultations',
-  'discounts',
-  'doorsClose',
-] as const;
-
-export const Schedule = ({ locale, copy }: Props) => {
-  const activities = ACTIVITY_KEYS.map((key) => copy.duringVisit[key]);
+export const Schedule = ({ copy }: Props) => {
+  const activities = copy.duringVisit.activities;
 
   return (
     <section id="schedule" className="py-24 bg-white relative overflow-hidden">
@@ -46,7 +37,7 @@ export const Schedule = ({ locale, copy }: Props) => {
         <div className="max-w-4xl mx-auto">
           {activities.map((event, index) => (
             <motion.div
-              key={index}
+              key={`${event.time}-${event.title}`}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-50px' }}

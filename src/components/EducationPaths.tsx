@@ -15,12 +15,7 @@ const STEP_KEYS = ['saveTime', 'accurateInfo', 'compareSchools', 'exclusiveOffer
 export const EducationPaths = ({ locale, copy }: Props) => {
   const steps = STEP_KEYS.map((key) => {
     const step = copy.whyParents[key];
-    const images = [
-      'https://images.unsplash.com/photo-1753715613651-749ef230482c?q=80&w=2070',
-      '/images/accurate-information.jpg',
-      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070',
-      'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=2070',
-    ];
+    const images = copy.media.whyParents;
     const icons = [<Clock className="w-8 h-8" />, <BookOpen className="w-8 h-8" />, <Laptop className="w-8 h-8" />, <Award className="w-8 h-8" />];
     const idx = STEP_KEYS.indexOf(key);
     return { ...step, image: images[idx], icon: icons[idx] };
@@ -96,10 +91,10 @@ export const ImageBanner = ({ copy }: Props) => {
           className="relative min-h-[460px] sm:min-h-[500px] md:h-[600px] rounded-2xl sm:rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.1)] flex items-end"
         >
           <NextImage
-            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070"
+            src={copy.media.aboutBanner}
             alt="EDUGATE EXPO"
             fill
-            className="object-cover transition-transform duration-[2s] hover:scale-105"
+            className="object-cover object-[center_20%] md:object-[center_15%] transition-transform duration-[2s] hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent" />
           <div className="relative z-10 w-full p-4 sm:p-8 md:p-16">

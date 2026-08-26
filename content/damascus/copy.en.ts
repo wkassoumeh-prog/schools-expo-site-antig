@@ -1,5 +1,11 @@
-/** English copy – structured by sections */
-export const copyEn = {
+import type { Copy } from '../getCopy';
+
+/** English copy – Damascus event */
+export const copyDamascusEn: Copy = {
+  cityToggle: {
+    damascus: 'Damascus',
+    aleppo: 'Aleppo',
+  },
   header: {
     brand: 'EDUGATE',
     brandHighlight: 'EXPO',
@@ -15,7 +21,8 @@ export const copyEn = {
     openingDate: 'August 9–11',
     title: 'Your Future',
     titleHighlight: 'Starts Here',
-    subtitle: "Your decision today shapes your children's tomorrow. Join Damascus's first-ever comprehensive Schools and Institutes Exhibition.",
+    subtitle:
+      "Your decision today shapes your children's tomorrow. Join Damascus's first-ever comprehensive Schools and Institutes Exhibition.",
     visitExpo: 'Visit the Expo',
     exhibitorReg: 'Exhibitor Registration',
     openingDay: 'Opening Day',
@@ -76,49 +83,51 @@ export const copyEn = {
     accurateInfo: 'Get accurate information directly from the source',
     compareEasily: 'Compare schools easily',
     exclusiveOffers: 'Benefit from offers and discounts',
-    informedDecision: 'Make an informed decision for your children\'s future',
+    informedDecision: "Make an informed decision for your children's future",
   },
   duringVisit: {
     title: 'During your',
     titleHighlight: 'Visit',
     subtitle:
       'Visiting hours are from 4:00 PM to 10:00 PM. Free shuttle buses are available in front of Sana and in Bab Tuma square from 4:00 PM till 9:00 PM.',
-    discoverSchools: {
-      time: '04:00 PM',
-      title: 'Discover private schools',
-      location: 'Main Exhibition Hall',
-      desc: 'Discover prominent private schools and their curricula (National – International – Languages).',
-    },
-    comparePrograms: {
-      time: '05:15 PM',
-      title: 'Compare programs',
-      location: 'Information Center',
-      desc: 'Compare various programs and review tuition fees and available payment plans.',
-    },
-    meetAdmins: {
-      time: '06:30 PM',
-      title: 'Meet administrators',
-      location: 'Meeting Pods',
-      desc: 'Meet directly with school administrations and educators to get your questions answered.',
-    },
-    consultations: {
-      time: '07:45 PM',
-      title: 'Educational consultations',
-      location: 'Consultation Wing',
-      desc: "Receive specialized educational consultations specifically for your child's needs.",
-    },
-    discounts: {
-      time: '09:00 PM',
-      title: 'Exclusive discounts',
-      location: 'Registration Desk',
-      desc: 'Avail exclusive registration discounts only available during the expo.',
-    },
-    doorsClose: {
-      time: '10:00 PM',
-      title: 'Doors Close',
-      location: 'All Zones',
-      desc: 'The expo is open daily from 4:00 PM to 10:00 PM.',
-    },
+    activities: [
+      {
+        time: '04:00 PM',
+        title: 'Discover private schools',
+        location: 'Main Exhibition Hall',
+        desc: 'Discover prominent private schools and their curricula (National – International – Languages).',
+      },
+      {
+        time: '05:15 PM',
+        title: 'Compare programs',
+        location: 'Information Center',
+        desc: 'Compare various programs and review tuition fees and available payment plans.',
+      },
+      {
+        time: '06:30 PM',
+        title: 'Meet administrators',
+        location: 'Meeting Pods',
+        desc: 'Meet directly with school administrations and educators to get your questions answered.',
+      },
+      {
+        time: '07:45 PM',
+        title: 'Educational consultations',
+        location: 'Consultation Wing',
+        desc: "Receive specialized educational consultations specifically for your child's needs.",
+      },
+      {
+        time: '09:00 PM',
+        title: 'Exclusive discounts',
+        location: 'Registration Desk',
+        desc: 'Avail exclusive registration discounts only available during the expo.',
+      },
+      {
+        time: '10:00 PM',
+        title: 'Doors Close',
+        location: 'All Zones',
+        desc: 'The expo is open daily from 4:00 PM to 10:00 PM.',
+      },
+    ],
   },
   campusSpotlight: {
     badge: 'Educational Excellence',
@@ -132,14 +141,47 @@ export const copyEn = {
     virtualSchools: { title: 'Virtual Schools', desc: 'The future of flexible academic learning.' },
   },
   schools: {
+    layout: 'cards',
     title: 'Participating Institutions',
     subtitle: 'Explore some of the leading schools and institutes joining EDUGATE EXPO 2026.',
     viewAll: 'View All Participating Schools',
     scholarships: 'Scholarships Available',
     details: 'Details',
-    school1: { name: 'Damascus International', location: 'Mazzeh, Damascus', type: 'International' },
-    school2: { name: 'Al-Amal Private School', location: 'Malki, Damascus', type: 'National' },
-    school3: { name: 'Syrian Modern Academy', location: 'Kafarsouseh, Damascus', type: 'National & Languages' },
+    items: [
+      {
+        name: 'Damascus International',
+        location: 'Mazzeh, Damascus',
+        type: 'International',
+        image: 'https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?w=800&q=80',
+        rating: 4.9,
+      },
+      {
+        name: 'Al-Amal Private School',
+        location: 'Malki, Damascus',
+        type: 'National',
+        image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80',
+        rating: 4.9,
+      },
+      {
+        name: 'Syrian Modern Academy',
+        location: 'Kafarsouseh, Damascus',
+        type: 'National & Languages',
+        image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80',
+        rating: 4.9,
+      },
+    ],
+  },
+  sponsors: {
+    label: 'Sponsors & Media Partners',
+    title: 'Sponsors & Media Partners',
+    subtitle: '',
+    groups: [],
+  },
+  sectors: {
+    label: 'Exhibitors',
+    title: 'Exhibitors',
+    subtitle: '',
+    items: [],
   },
   gallery: {
     title: 'Moments of',
@@ -164,7 +206,7 @@ export const copyEn = {
     },
     t3: {
       quote:
-        "Finally, an event that brings all educational options under one roof in Damascus. A must-visit for every family.",
+        'Finally, an event that brings all educational options under one roof in Damascus. A must-visit for every family.',
       author: 'Lina Kabbani',
       role: 'Parent',
     },
@@ -173,27 +215,35 @@ export const copyEn = {
     title: 'Frequently Asked',
     titleHighlight: 'Questions',
     subtitle: 'Everything you need to know about EDUGATE EXPO 2026.',
-    q1: { q: 'Is the expo for students only?', a: 'The expo is open to students, parents, and anyone interested in education and professional development.' },
-    q2: { q: 'Is there an entry fee?', a: 'Entry is free of charge.' },
-    q3: {
-      q: 'Can students register during the expo?',
-      a: 'Yes, direct communication and registration will be available with many participating institutions.',
-    },
-    q4: { q: 'What are the visiting hours?', a: 'Visiting hours are from 4:00 PM to 10:00 PM.' },
-    q5: {
-      q: 'Is there transportation to the Fairground (Fair City)?',
-      a: 'Yes, free shuttle buses are available in front of Sana and in Bab Tuma square from 4:00 PM till 9:00 PM.',
-    },
+    items: [
+      {
+        q: 'Is the expo for students only?',
+        a: 'The expo is open to students, parents, and anyone interested in education and professional development.',
+      },
+      { q: 'Is there an entry fee?', a: 'Entry is free of charge.' },
+      {
+        q: 'Can students register during the expo?',
+        a: 'Yes, direct communication and registration will be available with many participating institutions.',
+      },
+      { q: 'What are the visiting hours?', a: 'Visiting hours are from 4:00 PM to 10:00 PM.' },
+      {
+        q: 'Is there transportation to the Fairground (Fair City)?',
+        a: 'Yes, free shuttle buses are available in front of Sana and in Bab Tuma square from 4:00 PM till 9:00 PM.',
+      },
+    ],
   },
   registration: {
     title: 'Exhibitor Registration',
     subtitle:
       "Strengthen your school's presence and reach thousands of families. Join us as an exhibitor, sponsor, or media partner.",
+    registerVisitor: 'Register Now',
     registerExhibitor: 'Register as Exhibitor',
     goldenExhibitor: 'Golden Exhibitor',
     silverExhibitor: 'Silver Exhibitor',
     standard: 'Standard',
     sponsorsPartners: 'Sponsors & Media Partners',
+    showExhibitorTiers: true,
+    visitorPrimary: false,
   },
   contact: {
     badge: 'Get In Touch',
@@ -265,4 +315,18 @@ export const copyEn = {
     facebook: 'Facebook',
     instagram: 'Instagram',
   },
-} as const;
+  media: {
+    heroImage: 'https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2070&auto=format&fit=crop',
+    heroVideo: '',
+    heroPoster: '',
+    aboutBanner: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070',
+    campus1: '/images/campusspotlight-1.jpg',
+    campus2: '/images/campusspotlight-2.jpg',
+    whyParents: [
+      'https://images.unsplash.com/photo-1753715613651-749ef230482c?q=80&w=2070',
+      '/images/accurate-information.jpg',
+      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070',
+      'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=2070',
+    ],
+  },
+};
