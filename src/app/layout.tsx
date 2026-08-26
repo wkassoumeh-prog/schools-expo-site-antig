@@ -15,9 +15,9 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: 'EDUGATE EXPO 2026 | National Schools Connection',
+  title: 'إديوغيت إكسبو 2026 | المعرض الوطني للمدارس',
   description:
-    'The premier national fair connecting students with prestigious schools and exclusive scholarships.',
+    'الخيارات التعليمية تحت سقف واحد. المعرض الأول الشامل للمدارس والمعاهد.',
 };
 
 export default async function RootLayout({

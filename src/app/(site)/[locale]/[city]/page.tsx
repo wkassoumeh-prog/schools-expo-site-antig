@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { EducationPaths, ImageBanner } from '@/components/EducationPaths';
@@ -23,6 +24,15 @@ type Props = {
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) => CITIES.map((city) => ({ locale, city })));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, city } = await params;
+  const copy = getCopy(parseLocale(locale), parseCity(city));
+  return {
+    title: copy.meta.title,
+    description: copy.meta.description,
+  };
 }
 
 export default async function CityPage({ params }: Props) {

@@ -2,6 +2,11 @@ import type { Copy } from '../getCopy';
 
 /** Arabic copy – Damascus event */
 export const copyDamascusAr: Copy = {
+  meta: {
+    title: 'إديوغيت إكسبو 2026 | المعرض الوطني للمدارس',
+    description:
+      'الخيارات التعليمية تحت سقف واحد. المعرض الأول الشامل للمدارس والمعاهد في دمشق.',
+  },
   cityToggle: {
     damascus: 'دمشق',
     aleppo: 'حلب',

@@ -2,6 +2,11 @@ import type { Copy } from '../getCopy';
 
 /** English copy – Damascus event */
 export const copyDamascusEn: Copy = {
+  meta: {
+    title: 'EDUGATE EXPO 2026 | National Schools Connection',
+    description:
+      "Your decision today shapes your children's tomorrow. Join Damascus's first-ever comprehensive Schools and Institutes Exhibition.",
+  },
   cityToggle: {
     damascus: 'Damascus',
     aleppo: 'Aleppo',

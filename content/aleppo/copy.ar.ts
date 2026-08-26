@@ -2,6 +2,11 @@ import type { Copy } from '../getCopy';
 
 /** Arabic copy – Aleppo event (from sister landing page, matching existing site Arabic) */
 export const copyAleppoAr: Copy = {
+  meta: {
+    title: 'إديوغيت إكسبو 2026 | المعرض الوطني للمدارس',
+    description:
+      'الخيارات التعليمية تحت سقف واحد. المعرض الأول الشامل للمدارس والمعاهد في حلب.',
+  },
   cityToggle: {
     damascus: 'دمشق',
     aleppo: 'حلب',

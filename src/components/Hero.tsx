@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { cityPath, REGISTER_URL, type City, type Copy, type Locale } from 'content/getCopy';
@@ -124,10 +124,9 @@ export const Hero = ({ locale, city, copy }: Props) => {
           >
             <Link
               href={`${base}#schedule`}
-              className="group px-7 py-3.5 bg-blue-600 text-white rounded-xl font-bold text-base flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/20 transform hover:-translate-y-0.5"
+              className="px-7 py-3.5 bg-blue-600 text-white rounded-xl font-bold text-base flex items-center justify-center hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-500/20 transform hover:-translate-y-0.5"
             >
               {copy.hero.visitExpo}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180" />
             </Link>
             <Link
               href={REGISTER_URL}

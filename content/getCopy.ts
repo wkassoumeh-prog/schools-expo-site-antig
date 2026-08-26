@@ -13,6 +13,7 @@ export const DEFAULT_CITY: City = 'aleppo';
 export const REGISTER_URL = 'https://silah-tech.com/register/vulcan-1';
 
 export type Copy = {
+  meta: { title: string; description: string };
   cityToggle: { damascus: string; aleppo: string };
   header: {
     brand: string;

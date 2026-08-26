@@ -2,6 +2,11 @@ import type { Copy } from '../getCopy';
 
 /** English copy – Aleppo event (glossary-aligned with existing EDUGATE EN) */
 export const copyAleppoEn: Copy = {
+  meta: {
+    title: 'EDUGATE EXPO 2026 | National Schools Connection',
+    description:
+      "Your decision today shapes your children's tomorrow. Join Aleppo's first-ever comprehensive Schools and Institutes Exhibition.",
+  },
   cityToggle: {
     damascus: 'Damascus',
     aleppo: 'Aleppo',
