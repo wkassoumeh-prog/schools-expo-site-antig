@@ -17,7 +17,7 @@ const IMAGES = [
   'https://images.unsplash.com/photo-1531123414780-f74242c2b052?w=150&q=80',
 ];
 
-export const Testimonials = ({ locale, copy }: Props) => {
+export const Testimonials = ({ copy }: Props) => {
   const testimonials = TESTIMONIAL_KEYS.map((key, i) => ({
     ...copy.testimonials[key],
     image: IMAGES[i],

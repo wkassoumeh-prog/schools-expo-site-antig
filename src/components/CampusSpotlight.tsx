@@ -11,7 +11,7 @@ type Props = {
 
 const SPOTLIGHT_KEYS = ['languageCenters', 'eLearning', 'specialNeeds', 'virtualSchools'] as const;
 
-export const CampusSpotlight = ({ locale, copy }: Props) => {
+export const CampusSpotlight = ({ copy }: Props) => {
   const items = SPOTLIGHT_KEYS.map((key) => copy.campusSpotlight[key]);
 
   return (

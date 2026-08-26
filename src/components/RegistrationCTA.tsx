@@ -13,7 +13,7 @@ type Props = {
 
 const EXHIBITOR_TIERS = ['goldenExhibitor', 'silverExhibitor', 'standard'] as const;
 
-export const RegistrationCTA = ({ locale, city, copy }: Props) => {
+export const RegistrationCTA = ({ copy }: Props) => {
   const [showOptions, setShowOptions] = useState(false);
 
   return (

@@ -11,14 +11,13 @@ type Props = {
 };
 
 const STEP_KEYS = ['saveTime', 'accurateInfo', 'compareSchools', 'exclusiveOffers'] as const;
+const STEP_ICONS = [Clock, BookOpen, Laptop, Award] as const;
 
-export const EducationPaths = ({ locale, copy }: Props) => {
-  const steps = STEP_KEYS.map((key) => {
+export const EducationPaths = ({ copy }: Props) => {
+  const steps = STEP_KEYS.map((key, idx) => {
     const step = copy.whyParents[key];
-    const images = copy.media.whyParents;
-    const icons = [<Clock className="w-8 h-8" />, <BookOpen className="w-8 h-8" />, <Laptop className="w-8 h-8" />, <Award className="w-8 h-8" />];
-    const idx = STEP_KEYS.indexOf(key);
-    return { ...step, image: images[idx], icon: icons[idx] };
+    const Icon = STEP_ICONS[idx];
+    return { ...step, image: copy.media.whyParents[idx], Icon };
   });
 
   return (
@@ -66,7 +65,7 @@ export const EducationPaths = ({ locale, copy }: Props) => {
                 />
                 <div className="absolute inset-0 bg-blue-600/20 group-hover:bg-transparent transition-colors duration-500" />
                 <div className="absolute bottom-6 left-6 p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl text-blue-600">
-                  {step.icon}
+                  <step.Icon className="w-8 h-8" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{step.title}</h3>
